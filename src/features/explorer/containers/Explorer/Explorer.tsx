@@ -1,19 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { selectSearchQuery } from "../../services/store/selectors";
+import { selectExplorerState } from "../../services/store/selectors";
 import operations from "../../services/store/operations";
+
+import SearchForm from "../../components/SearchForm";
 
 const Explorer: React.FC = () => {
   const dispatch = useDispatch();
 
-  const searchQuery = useSelector(selectSearchQuery);
+  const explorerState = useSelector(selectExplorerState);
 
-  useEffect(() => {
-    dispatch(operations.searchUser("wkurek"));
-  }, [dispatch]);
+  const handleSearch = (query: string) =>
+    dispatch(operations.searchUser(query));
 
-  return <p>Explorer {searchQuery}</p>;
+  return (
+    <section className="m-4">
+      <SearchForm fetching={explorerState.fetching} search={handleSearch} />
+    </section>
+  );
 };
 
 export default Explorer;
