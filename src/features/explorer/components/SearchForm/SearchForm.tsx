@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Spinner } from "react-bootstrap";
 
 interface IProps {
   fetching: boolean;
@@ -17,6 +17,10 @@ const SearchForm: React.FC<IProps> = ({ fetching, search }) => {
     event.preventDefault();
   };
 
+  const spinner = fetching && (
+    <Spinner animation="border" size="sm" as="span" className="mr-2" />
+  );
+
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group controlId="formQuery">
@@ -27,6 +31,7 @@ const SearchForm: React.FC<IProps> = ({ fetching, search }) => {
         />
       </Form.Group>
       <Button type="submit" disabled={fetching} block={true}>
+        {spinner}
         Search
       </Button>
     </Form>

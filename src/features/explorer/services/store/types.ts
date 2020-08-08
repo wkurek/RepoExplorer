@@ -115,6 +115,10 @@ export interface IRepo {
   stargazersCount: number;
 }
 
+export interface IUserResult extends Omit<IUser, "repos"> {
+  repos: IRepo[];
+}
+
 export interface IExplorerState {
   fetching: boolean;
   error: boolean;
