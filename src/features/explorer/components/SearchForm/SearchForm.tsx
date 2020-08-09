@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 interface IProps {
   fetching: boolean;
@@ -33,6 +35,7 @@ const SearchForm: React.FC<IProps> = ({ fetching, search }) => {
       <Button type="submit" disabled={fetching} block={true}>
         {spinner}
         Search
+        <FontAwesomeIcon icon={faSearch} className="ml-1"/>
       </Button>
     </Form>
   );

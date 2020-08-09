@@ -29,6 +29,7 @@ describe("<Results />", () => {
         fetching={fetching}
         error={error}
         users={[]}
+        pagination={{ page: 1, pageCount: 1 }}
         updateUsersPage={updateUsersPage}
         updateUserReposPage={updateUserReposPage}
       />
@@ -55,7 +56,7 @@ describe("<Results />", () => {
     });
 
     const alert = queryByText(
-      "Use browser to search for users and their repos."
+      "Use browser to search for users and their repositories."
     );
 
     expect(alert).not.toBeNull();

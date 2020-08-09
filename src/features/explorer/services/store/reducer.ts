@@ -17,7 +17,7 @@ import {
   fetchUserReposFailure,
   updateUserReposPage,
 } from "./actions";
-import { normalizeUsers, normalizeRepos } from "./helpers";
+import { normalizeUsers, normalizeRepos, filterOutDuplicates } from "./helpers";
 
 const handleSearchUsersStart = (state: IExplorerState) => {
   state.error = false;
@@ -65,7 +65,10 @@ const handleFetchUserReposSuccess = (
   state.users.byId[payload.userId].repos = normalizedRepos.allIds;
 
   state.repos.byId = { ...state.repos.byId, ...normalizedRepos.byId };
-  state.repos.allIds = [ ...state.repos.allIds, ...normalizedRepos.allIds ];
+  state.repos.allIds = filterOutDuplicates([
+    ...state.repos.allIds,
+    ...normalizedRepos.allIds,
+  ]);
 };
 
 const handleFetchUserReposFailure = (

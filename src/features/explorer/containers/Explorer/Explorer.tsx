@@ -13,7 +13,9 @@ import Results from "../../components/Results";
 const Explorer: React.FC = () => {
   const dispatch = useDispatch();
 
-  const { fetching, error, searchQuery } = useSelector(selectExplorerState);
+  const { fetching, error, searchQuery, pagination } = useSelector(
+    selectExplorerState
+  );
   const users = useSelector(selectUsersResults);
 
   const handleSearch = (query: string) =>
@@ -33,6 +35,7 @@ const Explorer: React.FC = () => {
         error={error}
         searchQuery={searchQuery}
         users={users}
+        pagination={pagination}
         updateUsersPage={handleUpdateUsersPage}
         updateUserReposPage={handleUpdateUserReposPage}
       />
