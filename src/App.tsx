@@ -1,9 +1,14 @@
 import React from "react";
+import { Container } from "react-bootstrap";
 
 import Explorer from "./features/explorer/containers/Explorer";
 
 function App() {
-  return <Explorer />;
+  return (
+    <Container>
+      <Explorer />
+    </Container>
+  );
 }
 
 export default App;
