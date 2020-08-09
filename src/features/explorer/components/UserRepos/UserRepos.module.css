@@ -1,0 +1,14 @@
+.user {
+  background-color: #f0f0f0;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user:hover {
+  cursor: pointer;
+  background-color: #ededed;
+  font-weight: bold;
+}

@@ -4,7 +4,7 @@ import {
   generateUserModel,
   generateExplorerStateWithUser,
   generateRepoModel,
-} from "./helpers";
+} from "./utils";
 
 const ID_A = 1234567;
 const ID_B = 9876543;

@@ -63,3 +63,12 @@ export const normalizeRepos = (
     },
     { byId: {}, allIds: [] }
   );
+
+export const filterOutDuplicates = (items: number[]): number[] =>
+  items.reduceRight<number[]>((arr, item) => {
+    if (!arr.includes(item)) {
+      arr.push(item);
+    }
+
+    return arr;
+  }, []);

@@ -11,7 +11,7 @@ import {
   generateExplorerStateWithUser,
   generateRepoModel,
   generateSearchUserResponse,
-} from "./helpers";
+} from "./utils";
 
 const USER_ID_A = 123456;
 const USER_ID_B = 777777;

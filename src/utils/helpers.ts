@@ -18,7 +18,7 @@ export const getPageCount = (linkHeader: any): number => {
   }
 
   if (isLastPage(links)) {
-    return Number(links.prev.page);
+    return Number(links.prev.page) + 1;
   }
 
   if (links.last) {
