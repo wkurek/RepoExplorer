@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/RepoExplorer/static/css/main.343cf335.chunk.css",
+    "main.js": "/RepoExplorer/static/js/main.2fcd260c.chunk.js",
+    "main.js.map": "/RepoExplorer/static/js/main.2fcd260c.chunk.js.map",
+    "runtime-main.js": "/RepoExplorer/static/js/runtime-main.268d727c.js",
+    "runtime-main.js.map": "/RepoExplorer/static/js/runtime-main.268d727c.js.map",
+    "static/css/2.11829350.chunk.css": "/RepoExplorer/static/css/2.11829350.chunk.css",
+    "static/js/2.586686c5.chunk.js": "/RepoExplorer/static/js/2.586686c5.chunk.js",
+    "static/js/2.586686c5.chunk.js.map": "/RepoExplorer/static/js/2.586686c5.chunk.js.map",
+    "index.html": "/RepoExplorer/index.html",
+    "precache-manifest.d6e9221aa1527349816197a1a89bd872.js": "/RepoExplorer/precache-manifest.d6e9221aa1527349816197a1a89bd872.js",
+    "service-worker.js": "/RepoExplorer/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/RepoExplorer/static/css/2.11829350.chunk.css.map",
+    "static/css/main.343cf335.chunk.css.map": "/RepoExplorer/static/css/main.343cf335.chunk.css.map",
+    "static/js/2.586686c5.chunk.js.LICENSE.txt": "/RepoExplorer/static/js/2.586686c5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.268d727c.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.586686c5.chunk.js",
+    "static/css/main.343cf335.chunk.css",
+    "static/js/main.2fcd260c.chunk.js"
+  ]
+}
